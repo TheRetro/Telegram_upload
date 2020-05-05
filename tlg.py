@@ -6,8 +6,8 @@ import os
 from telethon.sync import TelegramClient, events
 from telegram.ext.dispatcher import run_async
 import asyncio
-api_id = 12345
-api_hash = ""
+api_id = 1208256
+api_hash = "d40a67fdcc138216b37451a6430c915b"
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -34,7 +34,7 @@ def echo(bot, update):
         f = download(update.message.text)
         with client:
             d =  client.loop.run_until_complete(upload(f))
-        Bt = telegram.Bot(token="TOKEN")
+        Bt = telegram.Bot(token="1199105758:AAHn1cnrbmkl5mgqFKNK19QzAVNflUlfVKA")
         # with open(f,'rb') as file:
         try:
             Bt.send_document(update.message.chat_id,d,timeout=1000)
